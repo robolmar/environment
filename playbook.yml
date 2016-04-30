@@ -1,0 +1,64 @@
+---
+- hosts: all
+  user: vagrant
+  sudo: yes
+  tasks:
+    # Install vim
+    - name: install vim
+      apt: pkg=vim state=latest
+
+    # Install git
+    - name: install git
+      apt: pkg=git state=latest
+
+    # Install MySQL Server
+    - name: install MySQL Server
+      apt: pkg=mysql-server state=latest
+
+    # Install Python
+    - name: install Python
+      apt: pkg=python state=latest
+
+    # Install libxml2-dev
+    - name: install libxml2-dev
+      apt: pkg=libxml2-dev state=latest
+
+    # Install libxslt-dev
+    - name: install libxslt-dev
+      apt: pkg=libxslt-dev state=latest
+
+    # Install lib32z1-dev
+    - name: install lib32z1-dev
+      apt: pkg=lib32z1-dev state=latest
+
+    # Install zlib1g-dev
+    - name: install zlib1g-dev
+      apt: pkg=zlib1g-dev state=latest
+
+    # Install python-dev
+    - name: install python-dev
+      apt: pkg=python-dev state=latest
+
+    # Install (Bottle) python package.
+    - pip: name=bottle
+
+    # Install (lxml) python package.
+    - pip: name=lxml
+
+    # Install (requests) python package.
+    - pip: name=requests
+
+    # Install (cssselect) python package.
+    - pip: name=cssselect
+
+    # Install (six) python package.
+    - pip: name=six
+
+    # Install (chainer) python package.
+    - pip: name=chainer
+
+    # Install (numpy) python package.
+    - pip: name=numpy
+
+    # Install (openCV) python package.
+    - pip: name=openCV
